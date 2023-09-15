@@ -16,9 +16,12 @@ function qr_code_content($content) {
     // Get the post title and permalink
     $post_title = get_the_title($post_id);
     $post_permalink = urldecode(get_permalink($post_id));
+    $width = get_option('qr_setting_width_id');
+
+    $height = get_option('qr_setting_height_id');
 
     // Define the dimension of the QR code (default is 150x150)
-    $dimension = apply_filters('qr_code_dimension', '150x150');
+    $dimension = apply_filters('qr_code_dimension', "{$width}x{$height}");
     $image_attr = apply_filters('qr_code_image_attr', '');
   
 
