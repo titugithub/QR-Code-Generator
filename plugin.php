@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * Plugin Name: QR Code Generator
+ */
+
 function qr_code_content($content) {
     // Get the post ID and post type
     $post_id = get_the_ID();
